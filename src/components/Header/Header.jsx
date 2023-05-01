@@ -47,7 +47,7 @@ const Header = () => {
               to="/blog"
               aria-label="Blog"
               title="Blog"
-              className={({ isActive }) => (isActive ? "active" : "default")}>
+              className={({ isActive }) => isActive ? "text-blue-600" : "default"}>
               Blog
             </NavLink>
           </li>

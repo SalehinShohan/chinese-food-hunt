@@ -10,6 +10,7 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 import Home from './components/Home/Home';
 
 
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
         {
           path: '/',
           element: <Home></Home>
-        }
+        },
     ]
   },
 ]);
