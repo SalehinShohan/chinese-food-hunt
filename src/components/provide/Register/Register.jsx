@@ -11,12 +11,27 @@ const Register = () => {
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const [photo, setPhoto] = useState('');
+    const [error, setError] = useState('');
 
     
 
     const handleRegister = (e) =>{
         e.preventDefault();
-        console.log(name, email, password, photo)
+        if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password)) {
+          setError("password not valid need 8 char ");
+          return;
+        }
+        if(name, email, photo, password){
+          registerUser(email, password)
+          .then(result => {
+            console.log(result.user)
+          })
+          .catch(err =>{
+            console.log(err.message)
+          })
+
+        }
+
     }
 
   return (
@@ -64,6 +79,7 @@ const Register = () => {
         </div>
       </div>
     </div>
+    <p>{error}</p>
   </div>
 </div>
   );

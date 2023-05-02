@@ -1,8 +1,19 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../provide/AuthProvider";
 
 const Header = () => {
+
+  const {user, logOut} = useContext(AuthContext);
+  console.log(user?.email)
+
+  const handleLogOut = () =>{
+    logOut()
+    .then()
+    .catch(err => console.log(err.message))
+  }
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="container mx-auto bg-gray-700 py-5 lg:mx-auto sm:max-w-xl lg:max-w-screen-xl lg:px-8">
@@ -54,14 +65,26 @@ const Header = () => {
           </li>
 
           <li>
-            <NavLink
+            {user?.email ?
+
+              <li>
+                <button onClick={handleLogOut}>Logout</button>
+              </li>
+              :
+            
+            (<NavLink
               to="/login"
               aria-label="Login"
               title="Login"
               className={({ isActive }) => (isActive ? "text-cyan-600" : "default")}>
               Login
-            </NavLink>
+            </NavLink>)}
+
+              <li>{user?.email}</li>
+
           </li>
+
+          
         </ul>
         <div className="lg:hidden">
           <button
