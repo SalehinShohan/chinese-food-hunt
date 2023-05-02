@@ -10,8 +10,12 @@ const auth = getAuth(app);
 
 const AuthProvider = ({children}) => {
 
+    const registerUser = (phtot, name, email, password) => {
+        return createUserWithEmailAndPassword(auth, email, password)
+    }
+
     const authInfo ={
-        
+        registerUser
     }
     
     return (

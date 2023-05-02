@@ -1,9 +1,24 @@
 /* eslint-disable no-unused-vars */
 import { Container } from "postcss";
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Form, Link } from "react-router-dom";
+import { AuthContext } from "../AuthProvider";
 
 const Register = () => {
+    const {registerUser} = useContext(AuthContext);
+
+    const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
+    const [password, setPassword] = useState('');
+    const [photo, setPhoto] = useState('');
+
+    
+
+    const handleRegister = (e) =>{
+        e.preventDefault();
+        console.log(name, email, password, photo)
+    }
+
   return (
     <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col">
@@ -18,26 +33,26 @@ const Register = () => {
           <label className="label">
             <span className="label-text">Name</span>
           </label>
-          <input type="text" placeholder="Name" className="input input-bordered" />
+          <input onChange={(e)=> setName(e.target.value)} type="text" placeholder="Name" className="input input-bordered" required />
         </div>
 
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" placeholder="Email" className="input input-bordered" />
+          <input onChange={(e)=> setEmail(e.target.value)} type="email" placeholder="Email" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" placeholder="Password" className="input input-bordered" />
+          <input onChange={(e)=> setPassword(e.target.value)} type="password" placeholder="Password" className="input input-bordered" required/>
 
           <div className="form-control">
           <label className="label">
             <span className="label-text">Photo URL</span>
           </label>
-          <input type="text" placeholder="Photo URL" className="input input-bordered" />
+          <input onChange={(e)=> setPhoto(e.target.value)} type="text" placeholder="Photo URL" className="input input-bordered" required/>
         </div>
 
           <label className="label">
@@ -45,7 +60,7 @@ const Register = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Register</button>
+          <button onClick={handleRegister} className="btn btn-primary">Register</button>
         </div>
       </div>
     </div>
