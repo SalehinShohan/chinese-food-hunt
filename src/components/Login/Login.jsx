@@ -5,7 +5,7 @@ import { Form, Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero mt-20">
       <div className="hero-content flex-col">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold mb-10">Login now!</h1>

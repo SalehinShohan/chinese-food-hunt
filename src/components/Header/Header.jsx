@@ -38,7 +38,7 @@ const Header = () => {
               aria-label="Home"
               title="Home"
               className={({ isActive }) =>
-                isActive ? "active" : "hover:text-cyan-600"
+                isActive ? "text-cyan-600" : "default"
               }>
               Home
             </NavLink>
@@ -48,7 +48,7 @@ const Header = () => {
               to="/blog"
               aria-label="Blog"
               title="Blog"
-              className={({ isActive }) => isActive ? "text-blue-600" : "default"}>
+              className={({ isActive }) => isActive ? "text-cyan-600" : "default"}>
               Blog
             </NavLink>
           </li>
@@ -58,7 +58,7 @@ const Header = () => {
               to="/login"
               aria-label="Login"
               title="Login"
-              className={({ isActive }) => (isActive ? "active" : "default")}>
+              className={({ isActive }) => (isActive ? "text-cyan-600" : "default")}>
               Login
             </NavLink>
           </li>
