@@ -8,6 +8,9 @@ const ViewDetails = () => {
   const allData = useLoaderData();
   // console.log(allData.ingredients[0]);
 
+  const {chefInfoId} = useParams();
+  console.log(chefInfoId)
+
   // const newData = allData.find((detail) => detail.id === chefInfoId);
 
   const {

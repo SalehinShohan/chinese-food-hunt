@@ -4,15 +4,14 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provide/AuthProvider";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+  console.log(user?.email);
 
-  const {user, logOut} = useContext(AuthContext);
-  console.log(user?.email)
-
-  const handleLogOut = () =>{
+  const handleLogOut = () => {
     logOut()
-    .then()
-    .catch(err => console.log(err.message))
-  }
+      .then()
+      .catch((err) => console.log(err.message));
+  };
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
@@ -59,32 +58,36 @@ const Header = () => {
               to="/blog"
               aria-label="Blog"
               title="Blog"
-              className={({ isActive }) => isActive ? "text-cyan-600" : "default"}>
+              className={({ isActive }) =>
+                isActive ? "text-cyan-600" : "default"
+              }>
               Blog
             </NavLink>
           </li>
 
-          <li>
-            {user?.email ?
-
+          <li className="flex justify-center items-center">
+            {user?.email ? (
               <li>
                 <button onClick={handleLogOut}>Logout</button>
               </li>
-              :
-            
-            (<NavLink
-              to="/login"
-              aria-label="Login"
-              title="Login"
-              className={({ isActive }) => (isActive ? "text-cyan-600" : "default")}>
-              Login
-            </NavLink>)}
+            ) : (
+              <NavLink
+                to="/login"
+                aria-label="Login"
+                title="Login"
+                className={({ isActive }) =>
+                  isActive ? "text-cyan-600" : "default"
+                }>
+                Login
+              </NavLink>
+            )}
 
-              <li>{user?.email}</li>
-
+            {user && (
+              <div className="ml-2">
+                <img className="w-8 h-8 rounded-lg" src='https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_0.jpg' alt=""/>
+              </div>
+            )}
           </li>
-
-          
         </ul>
         <div className="lg:hidden">
           <button
