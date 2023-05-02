@@ -38,8 +38,8 @@ const Home = () => {
       </div>
 
       <div>
-        <h2 className="text-center mt-40 text-4xl font-bold">Featured Jobs</h2>
-
+        <h2 className="text-center mt-40 text-5xl font-bold text-white">Our Chef Details</h2>
+          <p className="text-center text-xl font-bold container mx-auto mt-8">Cooking classes come in various forms—it could be the live demonstration or the virtual cooking class. Whatever form it may take, cooking classes are a great opportunity to develop or enhance cooking abilities, learn new techniques, or sample a new cuisine or test a kitchen gadget. </p>
         <div className="grid sm:grid-cols-1 lg:grid-cols-2 mt-10 lg:ml-80">
         {datas.map((data) => (
           <ChefInfo key={data.id} data={data}>
