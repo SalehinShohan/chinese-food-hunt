@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { useLoaderData, useNavigation, useParams } from 'react-router-dom';
 
@@ -11,7 +12,7 @@ const ViewDetails = () => {
 
     return (
         <div>
-            <h2></h2>
+            <h2>All data</h2>
         </div>
     );
 };
