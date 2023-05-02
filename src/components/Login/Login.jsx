@@ -1,9 +1,29 @@
 /* eslint-disable no-unused-vars */
 import { Container } from "postcss";
-import React from "react";
-import { Form, Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Form, Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../provide/AuthProvider";
 
 const Login = () => {
+  const {loginUser} =useContext(AuthContext);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = (e) =>{
+    e.preventDefault();
+    if((email, password)){
+      loginUser(email, password)
+      .then(result =>{
+        console.log(result.user)
+        navigate('/');
+      })
+      .catch(err => console.log(err.message))
+    }
+  }
   return (
     <div className="hero mt-20">
       <div className="hero-content flex-col">
@@ -18,8 +38,9 @@ const Login = () => {
                 <span className="label-text">Email</span>
               </label>
               <input
+               onChange={(e) => setEmail(e.target.value)}
                 type="email"
-                placeholder="email"
+                placeholder="Email"
                 className="input input-bordered"
               />
             </div>
@@ -28,8 +49,9 @@ const Login = () => {
                 <span className="label-text">Password</span>
               </label>
               <input
+               onChange={(e) => setPassword(e.target.value)}
                 type="password"
-                placeholder="password"
+                placeholder="Password"
                 className="input input-bordered"
               />
               <label className="label">
@@ -39,7 +61,7 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
+              <button onClick={handleLogin} className="btn btn-primary">Login</button>
             </div>
           </div>
         </div>
