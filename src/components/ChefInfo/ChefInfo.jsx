@@ -14,7 +14,7 @@ const ChefInfo = ({ data }) => {
         <h2 className="card-title">Name: {name}</h2>
         <p>Years of experience: {experience}</p>
         <span>Numbers of recipes: {recipes}</span>
-        <span>Likes: {likes}</span>
+        <span>Likes: {likes}k</span>
         <div className="card-actions">
           <Link to={`../chefInfo/${id}`} className="btn btn-outline">View Recipes</Link>
         </div>
