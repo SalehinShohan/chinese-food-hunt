@@ -1,32 +1,37 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import './index.css'
-import App from './App';
-import ErrorPage from './components/ErrorPage/ErrorPage';
-import Home from './components/Home/Home';
-
-
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./index.css";
+import App from "./App";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
+import Home from "./components/Home/Home";
+import ViewDetails from "./components/ViewDetails/ViewDetails";
+import AuthProvider from "./components/provide/AuthProvider";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App></App>,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
-        {
-          path: '/',
-          element: <Home></Home>
-        },
-    ]
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "chefInfo/:chefInfoId",
+        element: <ViewDetails></ViewDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/chefInfo/${params.id}`),
+      },
+    ],
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
-  </React.StrictMode>,
-)
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  </React.StrictMode>
+);
