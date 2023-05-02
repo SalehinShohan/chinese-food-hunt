@@ -30,7 +30,7 @@ const Home = () => {
           <button className="btn btn-outline btn-accent mt-5">View Us</button>
         </div>
         <div className="w-8/12 h-64">
-          <img
+          <img className="rounded-xl"
             src="https://www.jessicagavin.com/wp-content/uploads/2021/07/Square-Category-Pin-Chinese.jpg"
             alt=""
           />
@@ -40,7 +40,7 @@ const Home = () => {
       <div>
         <h2 className="text-center mt-40 text-5xl font-bold text-white">Our Chef Details</h2>
           <p className="text-center text-xl font-bold container mx-auto mt-8">Cooking classes come in various forms—it could be the live demonstration or the virtual cooking class. Whatever form it may take, cooking classes are a great opportunity to develop or enhance cooking abilities, learn new techniques, or sample a new cuisine or test a kitchen gadget. </p>
-        <div className="grid sm:grid-cols-1 lg:grid-cols-2 mt-10 lg:ml-80">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-3 mt-10 lg:ml-32">
         {datas.map((data) => (
           <ChefInfo key={data.id} data={data}>
             {" "}
