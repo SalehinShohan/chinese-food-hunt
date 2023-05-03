@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         path: "chefInfo/:chefInfoId",
         element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/chefInfo/${params.chefInfoId}`),
+          fetch(`https://chinese-food-hunt-server-salehinshohan.vercel.app/chefInfo/${params.chefInfoId}`),
       },
       {
         path: '/login',
