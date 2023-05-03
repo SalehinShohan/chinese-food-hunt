@@ -11,12 +11,15 @@ const auth = getAuth(app);
 const AuthProvider = ({children}) => {
 
     const [user, setUser] = useState({});
+    const [loading, setLoading] = useState(true);
 
     const registerUser = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     const loginUser = (email, password) =>{
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
@@ -27,6 +30,7 @@ const AuthProvider = ({children}) => {
     useEffect(()=> {
         const unSunscribe = onAuthStateChanged(auth, (logedUser)=> {
             setUser(logedUser);
+            setLoading(false);
         });
         return () => {
             unSunscribe();
@@ -39,7 +43,8 @@ const AuthProvider = ({children}) => {
         registerUser,
         user,
         logOut,
-        loginUser
+        loginUser,
+        loading
     }
     
     return (
