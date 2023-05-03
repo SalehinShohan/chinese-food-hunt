@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 import { useLoaderData, useNavigation, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
@@ -7,6 +7,10 @@ import { ToastContainer, toast } from 'react-toastify';
 const ViewDetails = () => {
   const allData = useLoaderData();
   // console.log(allData.ingredients[0]);
+
+  const [fav, setFav] = useState(false);
+  const [fav1, setFav1] = useState(false);
+  const [fav2, setFav2] = useState(false);
 
   const {chefInfoId} = useParams();
   console.log(chefInfoId)
@@ -38,7 +42,8 @@ const ViewDetails = () => {
       progress: undefined,
       theme: "colored",
       });
-  }
+  } 
+  
 
   return (
     <div>
@@ -104,8 +109,8 @@ const ViewDetails = () => {
                 />
               </div>
             </p>
-            <div className="card-actions justify-end">
-              <button onClick={notify} className="btn btn-primary">Favorite</button>
+            <div onClick={()=>setFav(true)} className="card-actions justify-end">
+              <button disabled={fav} onClick={notify} className="btn btn-primary">Favorite</button>
               <ToastContainer />
             </div>
           </div>
@@ -157,8 +162,8 @@ const ViewDetails = () => {
                 />
               </div>
             </p>
-            <div className="card-actions justify-end">
-              <button onClick={notify} className="btn btn-primary">Favorite</button>
+            <div onClick={()=>setFav1(true)} className="card-actions justify-end">
+              <button disabled={fav1} onClick={notify} className="btn btn-primary">Favorite</button>
             </div>
           </div>
         </div>
@@ -208,8 +213,8 @@ const ViewDetails = () => {
                 />
               </div>
             </p>
-            <div className="card-actions justify-end">
-              <button onClick={notify} className="btn btn-primary">Favorite</button>
+            <div onClick={()=>setFav2(true)} className="card-actions justify-end">
+              <button disabled={fav2} onClick={notify} className="btn btn-primary">Favorite</button>
             </div>
           </div>
         </div>

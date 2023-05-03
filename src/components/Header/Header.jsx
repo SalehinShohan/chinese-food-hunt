@@ -66,7 +66,7 @@ const Header = () => {
           </li>
 
           <li className="flex justify-center items-center">
-            {user?.email ? (
+            {user ? (
               <li>
                 <button onClick={handleLogOut}>Logout</button>
               </li>
