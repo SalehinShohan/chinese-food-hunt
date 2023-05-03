@@ -1,14 +1,30 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import ChefInfo from "../ChefInfo/ChefInfo";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
   const [datas, setData] = useState([]);
   useEffect(() => {
-    fetch("https://chinese-food-hunt-server-salehinshohan.vercel.app/chefInfo")
+    fetch("https://chinese-food-hunt-server-salehinshohan.vercel.app//chefInfo")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
+
+
+  const notify = () => {
+    toast.success('Love This Food Recipe', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+  }
 
   return (
     <div>
@@ -59,64 +75,84 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <h2 className="text-center text-4xl font-bold text-white">Our Recipes</h2>
+      <h2 className="text-center text-4xl font-bold text-white mt-10">Our Recipes</h2>
       <p className="text-center text-xl mt-5 font-bold">
         Your Desired Food is Here!
       </p>
 
-      <div className="carousel w-8/12 mt-10 mb-10 h-96 container mx-auto">
-        <div id="slide1" className="carousel-item relative w-full">
-          <img src="../../../public/1 (5).jpg" className="w-full" />
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide4" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide2" className="btn btn-circle">
-              ❯
-            </a>
+      <div className="grid sm:grid-cols-1 lg:grid-cols-2 mt-10 mb-16 container mx-auto lg:ml-80">
+        <div className="card w-96 bg-base-100 shadow-xl image-full mt-10 mb-10">
+          <figure>
+            <img
+              src="https://ik.imagekit.io/awwybhhmo/satellite_images/chinese/beyondmenu/hero/2.jpg?tr=w-3840,q-50"
+              alt=""
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Peking Duck</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <div className="card-actions justify-end">
+              <button onClick={notify} className="btn btn-primary">Love</button>
+              <ToastContainer />
+            </div>
           </div>
         </div>
-        <div id="slide2" className="carousel-item relative w-full">
-          <img src="../../../public/1 (2).jpg" className="w-full" />
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide1" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide3" className="btn btn-circle">
-              ❯
-            </a>
+        <div className="card w-96 bg-base-100 shadow-xl image-full mt-10 mb-10">
+          <figure>
+            <img
+              src="https://media.cnn.com/api/v1/images/stellar/prod/220921081550-05-chinese-foods-mapo-tofu.jpg?c=original&q=w_1280,c_fill"
+              alt=""
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Chinese Hamburger</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <div className="card-actions justify-end">
+              <button onClick={notify} className="btn btn-primary">Love</button>
+              <ToastContainer />
+            </div>
           </div>
         </div>
-        <div id="slide3" className="carousel-item relative w-full">
-          <img src="../../../public/1 (3).jpg" className="w-full" />
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide2" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide4" className="btn btn-circle">
-              ❯
-            </a>
+        <div className="card w-96 bg-base-100 shadow-xl image-full mt-10 mb-10">
+          <figure>
+            <img
+              src="https://i.ytimg.com/vi/K71606L_7PY/maxresdefault.jpg"
+              alt=""
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Kung Pao Chicken</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <div className="card-actions justify-end">
+              <button onClick={notify} className="btn btn-primary">Love</button>
+              <ToastContainer />
+            </div>
           </div>
         </div>
-        <div id="slide4" className="carousel-item relative w-full">
-          <img src="../../../public/1 (4).jpg" className="w-full" />
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide3" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide1" className="btn btn-circle">
-              ❯
-            </a>
+        <div className="card w-96 bg-base-100 shadow-xl image-full mt-10 mb-10">
+          <figure>
+            <img
+              src="https://assets3.thrillist.com/v1/image/1157499/828x610/flatten;crop;webp=auto;jpeg_quality=60.jpg"
+              alt=""
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Scallion Pancakes</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <div className="card-actions justify-end">
+              <button onClick={notify} className="btn btn-primary">Love</button>
+              <ToastContainer />
+            </div>
           </div>
         </div>
       </div>
 
-      <h2 className="text-center text-4xl font-bold text-white">Our Reputation</h2>
-      <p className="text-center text-xl mt-5 font-bold">
-        We worked for you!
-      </p>
+      <h2 className="text-center text-4xl font-bold text-white">
+        Our Reputation
+      </h2>
+      <p className="text-center text-xl mt-5 font-bold">We worked for you!</p>
 
-      <div className="stats shadow container mb-20 mt-10 w-8/12 ml-80">
+      <div className="stats shadow container mb-20 mt-10 w-8/12 lg:ml-80">
         <div className="stat">
           <div className="stat-figure text-primary">
             <svg

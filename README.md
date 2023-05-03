@@ -1,11 +1,8 @@
 # chinese-food-hunt
 
 ## json raw data link: 
-https://raw.githubusercontent.com/Porgramming-Hero-web-course/b7a9-career-hub-SalehinShohan/main/public/FeaturedJobs.json?token=GHSAT0AAAAAACA6MJ6FWM2T7AHPDPXIB54WZBVRJ3A
+https://chinese-food-hunt-server-salehinshohan.vercel.app/chefInfo
 
-https://raw.githubusercontent.com/Porgramming-Hero-web-course/b7a9-career-hub-SalehinShohan/main/public/rechart.json?token=GHSAT0AAAAAACA6MJ6FXQACCHD5CZ3N6CFOZBVRLDQ
-
-https://raw.githubusercontent.com/Porgramming-Hero-web-course/b7a9-career-hub-SalehinShohan/main/public/JobCategory.json?token=GHSAT0AAAAAACA6MJ6EPDNAYQNVFJCX32QGZBVRLCA
 
 # Working Procedure
 - Planning: Identify the website's purpose, audience, and content. Plan the website's structure and layout.
