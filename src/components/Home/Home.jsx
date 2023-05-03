@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Home = () => {
   const [datas, setData] = useState([]);
   useEffect(() => {
-    fetch("https://chinese-food-hunt-server-salehinshohan.vercel.app//chefInfo")
+    fetch("https://chinese-food-hunt-server-salehinshohan.vercel.app/chefInfo")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
