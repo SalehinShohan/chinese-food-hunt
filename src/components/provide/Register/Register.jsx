@@ -13,11 +13,12 @@ const Register = () => {
     const [photo, setPhoto] = useState('');
     const [error, setError] = useState('');
 
+    console.log(email, password, name, photo)
     
 
     const handleRegister = (e) =>{
         e.preventDefault();
-        if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password)) {
+        if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/.test(password)) {
           setError("password not valid need 8 char ");
           return;
         }

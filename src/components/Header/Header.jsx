@@ -83,7 +83,7 @@ const Header = () => {
             )}
 
             {user && (
-              <div className="ml-2">
+              <div className="ml-2 tooltip" data-tip={(user?.displayName)}>
                 <img className="w-8 h-8 rounded-lg" src='https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_0.jpg' alt=""/>
               </div>
             )}
