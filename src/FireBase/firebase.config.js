@@ -4,13 +4,16 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
+console.log('environment variable', import.meta.env.VITE_apiKey)
+
 const firebaseConfig = {
-  apiKey: "AIzaSyC4h2AZ4eig_41NkuPmtHng06Lw2i-YZXs",
-  authDomain: "chinese-food-hunt.firebaseapp.com",
-  projectId: "chinese-food-hunt",
-  storageBucket: "chinese-food-hunt.appspot.com",
-  messagingSenderId: "1015890963836",
-  appId: "1:1015890963836:web:4a10ce1b1d34f21ec348f9"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase
