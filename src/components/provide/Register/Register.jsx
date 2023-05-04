@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState } from "react";
 import { Form, Link } from "react-router-dom";
-import { AuthContext } from "../provide/AuthProvider";
+import { AuthContext } from "../AuthProvider";
 
 const Register = () => {
   const { registerUser } = useContext(AuthContext);
