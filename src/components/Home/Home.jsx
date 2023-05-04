@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import ChefInfo from "../ChefInfo/ChefInfo";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   const [datas, setData] = useState([]);
@@ -12,9 +12,8 @@ const Home = () => {
       .then((data) => setData(data));
   }, []);
 
-
   const notify = () => {
-    toast.success('Love This Food Recipe', {
+    toast.success("Love This Food Recipe", {
       position: "top-center",
       autoClose: 5000,
       hideProgressBar: false,
@@ -23,8 +22,8 @@ const Home = () => {
       draggable: true,
       progress: undefined,
       theme: "light",
-      });
-  }
+    });
+  };
 
   return (
     <div>
@@ -44,11 +43,13 @@ const Home = () => {
               ingredient is handpicked for medicinal purposes. <br /> The
               Chinese people rarely eat canned/frozen food
             </p>
-            <button className="btn btn-outline btn-accent mt-5">View Us</button>
+            <button className="btn btn-outline btn-accent mt-5 mb-5">
+              View Us
+            </button>
           </div>
           <div className="w-8/12 h-64">
             <img
-              className="rounded-xl"
+              className="rounded-2xl"
               src="https://www.jessicagavin.com/wp-content/uploads/2021/07/Square-Category-Pin-Chinese.jpg"
               alt=""
             />
@@ -75,13 +76,15 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <h2 className="text-center text-4xl font-bold text-white mt-10">Our Recipes</h2>
+      <h2 className="text-center text-4xl font-bold text-white mt-10">
+        Our Recipes
+      </h2>
       <p className="text-center text-xl mt-5 font-bold">
         Your Desired Food is Here!
       </p>
 
       <div className="grid sm:grid-cols-1 lg:grid-cols-2 mt-10 mb-16 container mx-auto lg:ml-80">
-        <div className="card w-96 bg-base-100 shadow-xl image-full mt-10 mb-10">
+        <div className="card w-96 bg-base-100 shadow-2xl image-full mt-10 mb-10">
           <figure>
             <img
               src="https://ik.imagekit.io/awwybhhmo/satellite_images/chinese/beyondmenu/hero/2.jpg?tr=w-3840,q-50"
@@ -89,15 +92,20 @@ const Home = () => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Peking Duck</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <h2 className="card-title text-white">Peking Duck</h2>
+            <p>
+              Some markets carry both brined and salt-free versions, the vast
+              majority of our recipes call for Shaoxing wine.
+            </p>
             <div className="card-actions justify-end">
-              <button onClick={notify} className="btn btn-primary">Love</button>
+              <button onClick={notify} className="btn btn-primary">
+                Love
+              </button>
               <ToastContainer />
             </div>
           </div>
         </div>
-        <div className="card w-96 bg-base-100 shadow-xl image-full mt-10 mb-10">
+        <div className="card w-96 bg-base-100 shadow-2xl image-full mt-10 mb-10">
           <figure>
             <img
               src="https://media.cnn.com/api/v1/images/stellar/prod/220921081550-05-chinese-foods-mapo-tofu.jpg?c=original&q=w_1280,c_fill"
@@ -105,15 +113,20 @@ const Home = () => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Chinese Hamburger</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <h2 className="card-title text-white">Chinese Hamburger</h2>
+            <p>
+              Most of the sesame oils you see in markets are toasted, so they
+              have a dark amber color and rich aroma.
+            </p>
             <div className="card-actions justify-end">
-              <button onClick={notify} className="btn btn-primary">Love</button>
+              <button onClick={notify} className="btn btn-primary">
+                Love
+              </button>
               <ToastContainer />
             </div>
           </div>
         </div>
-        <div className="card w-96 bg-base-100 shadow-xl image-full mt-10 mb-10">
+        <div className="card w-96 bg-base-100 shadow-2xl image-full mt-10 mb-10">
           <figure>
             <img
               src="https://i.ytimg.com/vi/K71606L_7PY/maxresdefault.jpg"
@@ -121,15 +134,20 @@ const Home = () => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Kung Pao Chicken</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <h2 className="card-title text-white">Kung Pao Chicken</h2>
+            <p>
+              When it comes to stocking soy sauce for your basic Chinese pantry,
+              both regular/light and dark soy sauces are a must.
+            </p>
             <div className="card-actions justify-end">
-              <button onClick={notify} className="btn btn-primary">Love</button>
+              <button onClick={notify} className="btn btn-primary">
+                Love
+              </button>
               <ToastContainer />
             </div>
           </div>
         </div>
-        <div className="card w-96 bg-base-100 shadow-xl image-full mt-10 mb-10">
+        <div className="card w-96 bg-base-100 shadow-2xl image-full mt-10 mb-10">
           <figure>
             <img
               src="https://assets3.thrillist.com/v1/image/1157499/828x610/flatten;crop;webp=auto;jpeg_quality=60.jpg"
@@ -137,10 +155,15 @@ const Home = () => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Scallion Pancakes</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <h2 className="card-title text-white">Scallion Pancakes</h2>
+            <p>
+              Soy sauce is the most iconic and well-known Chinese pantry
+              essential that you likely already have stocked.
+            </p>
             <div className="card-actions justify-end">
-              <button onClick={notify} className="btn btn-primary">Love</button>
+              <button onClick={notify} className="btn btn-primary">
+                Love
+              </button>
               <ToastContainer />
             </div>
           </div>
@@ -150,7 +173,9 @@ const Home = () => {
       <h2 className="text-center text-4xl font-bold text-white">
         Our Reputation
       </h2>
-      <p className="text-center text-xl mt-5 font-bold">We worked for you!</p>
+      <p className="text-center text-xl mt-5 font-bold">
+        We are working for you!!
+      </p>
 
       <div className="stats shadow container mb-20 mt-10 w-8/12 lg:ml-80">
         <div className="stat">
@@ -202,6 +227,64 @@ const Home = () => {
           <div className="stat-value">86%</div>
           <div className="stat-title">Tasks done</div>
           <div className="stat-desc text-secondary">31 tasks remaining</div>
+        </div>
+      </div>
+
+      <div className="container mx-auto my-5 py-5">
+        <h1 className="text-primary font-bold text-4xl">Contact Us</h1>
+        <p>
+          Explain why someone should contact your business. Describe how your
+          business can help solve the visitors problems. Include an email and
+          phone number so visitors can get in touch <br /> with you on their first
+          attempt. Include a short form using fields that will help your
+          business understand who is contacting them.
+        </p>
+        <div className="grid grid-cols-2">
+          <div className="">
+            <div className="my-5">
+              <div className="">
+                <h5 className="text-secondary text-xl">Phone Number</h5>
+                <h6 className="text-primary fw-bold">+880 01886***659</h6>
+              </div>
+            </div>
+            <div className="my-5">
+              <div>
+                <h5 className="text-secondary text-xl">Email</h5>
+                <h6 className="text-primary">ps.shohan@gmail.com</h6>
+              </div>
+            </div>
+            <div className="my-5">
+              <div>
+                <h5 className="text-secondary text-xl">Address</h5>
+                <h6 className="text-primary">B92/8 Savar, Dhaka</h6>
+              </div>
+            </div>
+          </div>
+          <div className="mt-5">
+            <div className="my-3">
+              <div className="mb-5">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="input input-bordered w-full max-w-lg"
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  className="input input-bordered w-full max-w-lg"
+                />
+              </div>
+            </div>
+            <input
+              type="text"
+              placeholder="Your Message"
+              className="input input-bordered input-lg w-full max-w-lg mb-5"
+            />
+            <br />
+            <button className="btn btn-success">Send message</button>
+          </div>
         </div>
       </div>
     </div>
