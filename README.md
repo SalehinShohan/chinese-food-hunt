@@ -15,7 +15,7 @@ https://chinese-food-hunt-server-salehinshohan.vercel.app/chefInfo
 
 
 # Live Site Link:
-https://bright-pony-a37bfe.netlify.app/
+https://chinese-food-hunt.web.app/
 
 
 
