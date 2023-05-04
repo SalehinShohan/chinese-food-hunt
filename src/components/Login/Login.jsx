@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Form,Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provide/AuthProvider";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import {
@@ -57,8 +57,8 @@ const Login = () => {
   };
 
   return (
-    <form action="">
-      <div className="hero mt-20">
+    <Form>
+      <Form className="hero mt-20">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold mb-10">Login now!</h1>
@@ -112,15 +112,15 @@ const Login = () => {
                 <button
                   onClick={handleGithubSingIn}
                   className="btn btn-outline btn-info">
-                  {" "}
+                 
                   <FaGithub className="mr-2" /> Login Github{" "}
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </form>
+      </Form>
+    </Form>
   );
 };
 

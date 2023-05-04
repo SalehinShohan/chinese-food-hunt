@@ -6,16 +6,13 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const ViewDetails = () => {
   const allData = useLoaderData();
-  // console.log(allData.ingredients[0]);
-
+  
   const [fav, setFav] = useState(false);
   const [fav1, setFav1] = useState(false);
   const [fav2, setFav2] = useState(false);
 
   const {chefInfoId} = useParams();
   console.log(chefInfoId)
-
-  // const newData = allData.find((detail) => detail.id === chefInfoId);
 
   const {
     name,
