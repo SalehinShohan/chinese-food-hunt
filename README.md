@@ -17,5 +17,10 @@ https://chinese-food-hunt-server-salehinshohan.vercel.app/chefInfo
 # Live Site Link:
 https://bright-pony-a37bfe.netlify.app/
 
-# Code Link:
-https://github.com/Porgramming-Hero-web-course/b7a9-career-hub-SalehinShohan
+
+
+# Server Code Link:
+https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-server-side-SalehinShohan
+
+# Client Code Link:
+https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-client-side-SalehinShohan

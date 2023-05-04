@@ -65,7 +65,7 @@ const Blog = () => {
         <div className="collapse-content">
           <p>
           In React, a custom hook is a reusable function that encapsulates commonly used logic and state in a composable way. Custom hooks enable developers to separate concerns, reuse code, and abstract away complex behavior. <br />
-          In React, a custom hook is a reusable function that encapsulates commonly used logic and state in a composable way. Custom hooks enable developers to separate concerns, reuse code, and abstract away complex behavior.
+          You would create a custom hook to encapsulate any functionality that is used in multiple places within your React application. Custom hooks help improve code organization and make it easier to maintain and test your code. They also help you abstract away complex logic and provide a simple and reusable interface for other components to use.
           </p>
         </div>
       </div>

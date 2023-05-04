@@ -177,7 +177,7 @@ const Home = () => {
         We are working for you!!
       </p>
 
-      <div className="stats shadow container mb-20 mt-10 w-8/12 lg:ml-80">
+      <div className="stats shadow container mx-auto mb-20 mt-10 lg:ml-40 w-full">
         <div className="stat">
           <div className="stat-figure text-primary">
             <svg
