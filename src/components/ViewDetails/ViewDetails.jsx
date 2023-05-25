@@ -11,8 +11,8 @@ const ViewDetails = () => {
   const [fav1, setFav1] = useState(false);
   const [fav2, setFav2] = useState(false);
 
-  const {chefInfoId} = useParams();
-  console.log(chefInfoId)
+  const {toyInfoId} = useParams();
+  console.log(toyInfoId)
 
   const {
     name,

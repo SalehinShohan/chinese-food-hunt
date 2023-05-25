@@ -16,7 +16,7 @@ const Register = () => {
 
   const handleRegister = (e) => {
     setError("");
-    e.target.reset();
+    // e.target.email.reset();
     e.preventDefault();
     if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/.test(password)) {
       setError("password not valid need 6 char");
